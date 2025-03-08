@@ -1,0 +1,462 @@
+/* Global Styles */
+@font-face {
+  font-family: 'Integral CF';
+  src: url('/fonts/Integral-CF-Font-Family/IntegralCF-Regular.otf') format('opentype'),
+       url('/fonts/Integral-CF-Font-Family/IntegralCF-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi-Regular';
+  src: url('../fonts/satoshi_complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2'),
+       url('../fonts/satoshi_complete/Fonts/WEB/fonts/Satoshi-Regular.woff') format('woff'),
+       url('../fonts/satoshi_complete/Fonts/WEB/fonts/Satoshi-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+body {
+    /* font-family: 'Integral CF', sans-serif; */
+    margin: 0;
+    padding: 0;
+}
+
+/* start styling Section Two  */
+.two {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+ .head {
+    font-weight: 700;
+    font-size: 48px;
+    font-family: 'Integral CF';
+}
+
+ .collect {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+ .card {
+    padding: 10px;
+    border-radius: 8px;
+    cursor:pointer;
+    transition: all 0.4s;
+}
+.card:hover{
+    transform: scale(0.9);
+    box-shadow: 0 6px 15px -2px rgb(226, 225, 225); /* ظل قوي من الأسفل فقط */
+}
+ .card img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+ .card h3 {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 100%;
+    text-align: start;
+}
+
+ .card .stars {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+}
+ .card .stars .repeat{
+    color: #FFC633;
+    gap:5.3px;
+    font-size: 20px;
+}
+ .card .stars .rate{
+    color:#000;
+    font-size:16px;
+    margin-top:5px;
+    font-weight:400px;
+}
+ .card .price {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+ .card .price .new {
+    font-weight: 700;
+    font-size: 24px;
+    color: #000;
+}
+
+ .card .price .old {
+    font-weight: 700;
+    font-size: 20px;
+    text-decoration: line-through;
+    color: #888;
+}
+
+ .card .discount {
+    background: #FF33331A;
+    padding: 5px 12px;
+    border-radius: 62px;
+    font-weight: 500;
+    color: #FF3333;
+}
+.card i{
+    font-size: 14px;
+}
+ .first {
+    margin-top: 30px;
+    padding: 15px 50px;
+    font-size: 20px;
+    font-weight: 500;
+    border: 1px solid #9d9d9d;
+    border-width:1px;
+    border-radius: 68px;
+    background: transparent;
+    cursor: pointer;
+    color:#575757;
+}
+ .first:hover{
+    color:aliceblue;
+    background-color: #000;
+}
+/* end styling section two */
+
+/*  start styling section three */
+.three {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+ .collectt {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* end styling section three */
+
+/* start styling  section four */
+.four{
+    background: #F0F0F0;
+    text-align:center;
+    width:80%;
+    height:100%;
+    margin:auto;
+    border-radius:40px;
+    padding:50px 20px;
+    }
+    .four h1{
+    font-family: 'Integral CF';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    padding-bottom:10px;
+    }
+    .four .imagecontainer{
+      width: 100%;
+      height:100%;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content: center;
+      gap:20px;
+    }
+    .four .imagecontainer .imageshow{
+    position: relative;
+     background: #FFFFFF;
+    height: 289px;
+    border-radius: 20px;
+    
+    }
+    #smallwidth{
+      width:407px;
+    }
+    #largewidth{
+      width:684px;
+      overflow: hidden;
+    }
+    .four .imagecontainer .imageshow img{
+      width: 100%;
+      border-radius: 20px;
+    }
+    .four .imagecontainer .imageshow h1{
+      position: absolute;
+      top:5% ;
+      left: 20%;
+      transform: translate(-50%, -50%);
+      color: #000;
+      font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 100%;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    }
+    /*  Responsive Design */
+@media (max-width: 992px) {
+    .four {
+        width: 95%;
+        padding: 40px 15px;
+    }
+    .four h1 {
+        font-size: 40px;
+    }
+    .four .imagecontainer {
+        gap: 15px;
+    }
+    #smallwidth, #largewidth {
+        width: 100%;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .four {
+        width: 100%;
+        padding: 30px 10px;
+    }
+    .four h1 {
+        font-size: 32px;
+    }
+    .four .imagecontainer .imageshow h1 {
+        font-size: 24px;
+        padding: 3px 8px;
+    }
+  }
+    /* End styling section four */
+
+    /* Start styling section five */
+.five {
+    padding: 50px 20px;
+    width: 90%;
+    margin: 0 auto;
+  }
+  
+  .five .thefirst {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .five .thefirst h1 {
+    font-family: 'Integral CF';
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 100%;
+  }
+  
+  .five .thefirst .directions {
+    font-size: 24px;
+    display: flex;
+    gap: 15px;
+  }
+  
+  .directions button {
+    background: unset;
+    color: #000;
+    border: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .directions button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .five .checkcollect {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 10px;
+    width: 100%;
+    scrollbar-width: none; /* إخفاء شريط التمرير في الفايرفوكس */
+  }
+  
+  .five .checkcollect::-webkit-scrollbar {
+    display: none; /* إخفاء شريط التمرير في كروم */
+  }
+  
+  .frame {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    border-radius: 20px;
+    padding: 28px 32px;
+    flex: 0 0 auto;
+    scroll-snap-align: center;
+    cursor:grab;
+  }
+  
+  .frame .yellowstar {
+    color: #FFC633;
+  }
+  
+  .frame .yellowstar span {
+    width: 22px;
+    height: 22px;
+  }
+  
+  .frame h2 {
+    font-family: 'Satoshi';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 22px;
+  }
+  
+  .frame h2 span {
+    font-size: 18px;
+    color: #01AB31;
+  }
+  
+  .frame p {
+    font-family: 'Satoshi';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .sectionblack {
+    background: #000000;
+    max-width: 1240px;
+    width: 90%;
+    border-radius: 20px;
+    padding: 50px 64px;
+    margin: 50px auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .sectionblack p {
+    font-family: 'Integral CF';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 45px;
+    color: #fff;
+    flex: 1;
+    min-width: 280px;
+    text-align: center;
+  }
+  
+  .sectionblack .emailandsubscribe {
+    display: flex;
+    flex-direction: column;
+    width: 349px;
+    gap: 14px;
+  }
+  
+  .sectionblack .emailandsubscribe input {
+    border-radius: 62px;
+    padding: 12px 16px;
+    border-width:1px;
+  }
+  .sectionblack .emailandsubscribe input:focus {
+    outline:none;
+    border:none;
+    box-shadow: 0 0 20px rgba(219, 222, 14, 0.905)  ; 
+}
+  
+  .sectionblack .emailandsubscribe button {
+    font-family: 'Satoshi';
+    font-weight: 500;
+    font-size: 16px;
+    color: #000000;
+    padding: 12px 16px;
+    border-radius: 62px;
+    cursor:pointer;
+  }
+  .sectionblack .emailandsubscribe button:hover{
+    background-color: #000000;
+    color:#fff;
+    border:1px solid #fff;
+  }
+  
+  @media (max-width: 992px) {
+    .five {
+      width: 95%;
+      padding: 40px 15px;
+    }
+  
+    .five .thefirst h1 {
+      font-size: 40px;
+    }
+  
+    .five .thefirst .directions {
+      font-size: 20px;
+    }
+  
+    .frame {
+      max-width: 320px;
+      padding: 20px 24px;
+    }
+  
+    .sectionblack {
+      flex-direction: column;
+      text-align: center;
+      padding: 40px 32px;
+    }
+  
+    .sectionblack p {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  
+    .sectionblack .emailandsubscribe {
+      width: 100%;
+      max-width: 400px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .five {
+      width: 100%;
+      padding: 30px 10px;
+    }
+  
+    .five .thefirst {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .five .thefirst h1 {
+      font-size: 32px;
+    }
+  
+    .five .thefirst .directions {
+      font-size: 18px;
+      gap: 10px;
+    }
+  
+    .frame {
+      max-width: 100%;
+      padding: 16px 20px;
+    }
+  
+    .sectionblack {
+      padding: 30px 20px;
+    }
+  
+    .sectionblack p {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  
+    .sectionblack .emailandsubscribe {
+      width: 100%;
+    }
+  }
+
+  /* End styling section five */
