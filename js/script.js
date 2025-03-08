@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const products = [
         {
-            image: "/images/Frame 32.jpg",
+            image: "./images/Frame 32.jpg",
             name: "T-SHIRT WITH TAPE DETAILS",
             rating: 4.5,
             newPrice: "$20",
@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
             discount: "20%"
         },
         {
-            image: "/images/Frame 33.jpg",
+            image: "./images/Frame 33.jpg",
             name: "SKINNY FIT JEANS",
             rating: 4.0,
             newPrice: "$18",
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
             discount: "18%"
         },
         {
-            image: "/images/Frame 34 (1).jpg",
+            image: "./images/Frame 34 (1).jpg",
             name: "CHECKERED SHIRT",
             rating: 5.0,
             newPrice: "$18",
@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
             discount: "18% "
         },
         {
-            image: "/images/Frame 38.jpg",
+            image: "./images/Frame 38.jpg",
             name: "SLEEVE STRIPED T-SHIRT",
             rating: 4.0,
             newPrice: "$18",
@@ -86,7 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // section three
 const product = [
     {
-        image: "/images/image 7.jpg",
+        image: "./images/image 7.jpg",
         name: "VERTICAL STRIPED SHIRT",
         rating: 4.5,
         newPrice: "$20",
@@ -94,7 +94,7 @@ const product = [
         discount: "20%"
     },
     {
-        image: "/images/image 8.jpg",
+        image: "./images/image 8.jpg",
         name: "COURAGE GRAPHIC T-SHIRT",
         rating: 4.0,
         newPrice: "$18",
@@ -102,7 +102,7 @@ const product = [
         discount: "18%"
     },
     {
-        image: "/images/image 9.jpg",
+        image: "./images/image 9.jpg",
         name: "LOOSE FIT BERMUDA SHORTS",
         rating: 5.0,
         newPrice: "$18",
@@ -110,7 +110,7 @@ const product = [
         discount: "18% "
     },
     {
-        image: "/images/image 10.jpg",
+        image: "./images/image 10.jpg",
         name: "FADED SKINNY JEANS",
         rating: 4.0,
         newPrice: "$18",
