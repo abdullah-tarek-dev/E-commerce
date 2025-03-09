@@ -2,13 +2,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const products = [
         {
-            image: "/images/Frame 32.jpg",
+            image: "./images/Frame 32.jpg",
             name: "T-shirt with Tape Details",
             rating: 4.5,
             newPrice: "$120",
         },
         {
-            image: "/images/Frame 33.jpg",
+            image: "./images/Frame 33.jpg",
             name: "Skinny Fit Jeans",
             rating: 4.0,
             newPrice: "$240",
@@ -16,14 +16,14 @@ document.addEventListener("DOMContentLoaded", () => {
             discount: "-20%"
         },
         {
-            image: "/images/Frame 34 (1).jpg",
+            image: "./images/Frame 34 (1).jpg",
             name: "Chekered Shirt",
             rating: 5.0,
             newPrice: "$180",
 
         },
         {
-            image: "/images/Frame 38.jpg",
+            image: "./images/Frame 38.jpg",
             name: "Sleeve Striped T-shirt",
             rating: 4.0,
             newPrice: "$130",
@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
 // section three
 const product = [
     {
-        image: "/images/image 7.jpg",
+        image: "./images/image 7.jpg",
         name: "Vertical Striped Shirt",
         rating: 4.5,
         newPrice: "$212",
@@ -95,19 +95,19 @@ const product = [
         discount: "-20%"
     },
     {
-        image: "/images/image 8.jpg",
+        image: "./images/image 8.jpg",
         name: "Courage Graphic T-shirt",
         rating: 4.0,
         newPrice: "$145",
     },
     {
-        image: "/images/image 9.jpg",
+        image: "./images/image 9.jpg",
         name: "Loose Fit Bermuda Shorts",
         rating: 5.0,
         newPrice: "$80",
     },
     {
-        image: "/images/image 10.jpg",
+        image: "./images/image 10.jpg",
         name: "Faded Skinny Jeans",
         rating: 4.0,
         newPrice: "$210",
