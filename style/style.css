@@ -23,7 +23,6 @@
     color: var(--text-color);
     background-color: #f8f8f8;
   }
-  /* mohamed  */
   a {
     text-decoration: none;
     color: #000000;
@@ -39,9 +38,6 @@
     list-style: none;
   }
   
-  /* span {
-    display: block;
-  } */
   
   .container {
     padding-left: 15px;
@@ -627,15 +623,6 @@
       text-align: center;
     }
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  /* end mohamed */
   /* start styling Section Two  */
   .two {
       padding: 50px 20px;
