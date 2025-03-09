@@ -1,41 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     const products = [
         {
-            image: "/images/Frame 32.jpg",
-            name: "T-SHIRT WITH TAPE DETAILS",
+            image: "./images/Frame 32.jpg",
+            name: "T-shirt with Tape Details",
             rating: 4.5,
-            newPrice: "$20",
-            oldPrice: "$25",
-            discount: "20%"
+            newPrice: "$120",
         },
         {
-            image: "/images/Frame 33.jpg",
-            name: "SKINNY FIT JEANS",
+            image: "./images/Frame 33.jpg",
+            name: "Skinny Fit Jeans",
             rating: 4.0,
-            newPrice: "$18",
-            oldPrice: "$22",
-            discount: "18%"
+            newPrice: "$240",
+            oldPrice: "$260",
+            discount: "-20%"
         },
         {
-            image: "/images/Frame 34 (1).jpg",
-            name: "CHECKERED SHIRT",
+            image: "./images/Frame 34 (1).jpg",
+            name: "Chekered Shirt",
             rating: 5.0,
-            newPrice: "$18",
-            oldPrice: "$22",
-            discount: "18% "
+            newPrice: "$180",
+
         },
         {
-            image: "/images/Frame 38.jpg",
-            name: "SLEEVE STRIPED T-SHIRT",
+            image: "./images/Frame 38.jpg",
+            name: "Sleeve Striped T-shirt",
             rating: 4.0,
-            newPrice: "$18",
-            oldPrice: "$22",
-            discount: "18%"
+            newPrice: "$130",
+            oldPrice: "$160",
+            discount: "-30%"
         }
     ];
-
+    
     const collectContainer = document.querySelector(".collect");
-
+    
     products.forEach(product => {
         const card = document.createElement("div");
         card.classList.add("card");
@@ -47,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     
         // إنشاء النجوم
         let starsHTML = "";
-        
+    
         // إضافة النجوم الكاملة ★
         for (let i = 0; i < fullStars; i++) {
             starsHTML += `<i class="fa-solid fa-star"></i>`;
@@ -63,7 +61,10 @@ document.addEventListener("DOMContentLoaded", () => {
             starsHTML += `<i class="fa-regular fa-star"></i>`;
         }
     
-        // إنشاء محتوى الكارد
+        // التحقق من وجود oldPrice و discount
+        const oldPrice = product.oldPrice ? `<span class="old">${product.oldPrice}</span>` : '';
+        const discount = product.discount ? `<span class="discount">${product.discount}</span>` : '';
+    
         card.innerHTML = `
             <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
@@ -73,8 +74,8 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             <div class="price">
                 <span class="new">${product.newPrice}</span>
-                <span class="old">${product.oldPrice}</span>
-                <span class="discount">${product.discount}</span>
+                ${oldPrice}
+                ${discount}
             </div>
         `;
     
@@ -86,36 +87,30 @@ document.addEventListener("DOMContentLoaded", () => {
 // section three
 const product = [
     {
-        image: "/images/image 7.jpg",
-        name: "VERTICAL STRIPED SHIRT",
+        image: "./images/image 7.jpg",
+        name: "Vertical Striped Shirt",
         rating: 4.5,
-        newPrice: "$20",
-        oldPrice: "$25",
-        discount: "20%"
+        newPrice: "$212",
+        oldPrice: "$232",
+        discount: "-20%"
     },
     {
-        image: "/images/image 8.jpg",
-        name: "COURAGE GRAPHIC T-SHIRT",
+        image: "./images/image 8.jpg",
+        name: "Courage Graphic T-shirt",
         rating: 4.0,
-        newPrice: "$18",
-        oldPrice: "$22",
-        discount: "18%"
+        newPrice: "$145",
     },
     {
-        image: "/images/image 9.jpg",
-        name: "LOOSE FIT BERMUDA SHORTS",
+        image: "./images/image 9.jpg",
+        name: "Loose Fit Bermuda Shorts",
         rating: 5.0,
-        newPrice: "$18",
-        oldPrice: "$22",
-        discount: "18% "
+        newPrice: "$80",
     },
     {
-        image: "/images/image 10.jpg",
-        name: "FADED SKINNY JEANS",
+        image: "./images/image 10.jpg",
+        name: "Faded Skinny Jeans",
         rating: 4.0,
-        newPrice: "$18",
-        oldPrice: "$22",
-        discount: "18%"
+        newPrice: "$210",
     }
 ];
 
@@ -148,6 +143,10 @@ product.forEach(product => {
         starsHTML += `<i class="fa-regular fa-star"></i>`;
     }
 
+    // التحقق من وجود oldPrice و discount
+    const oldPrice = product.oldPrice ? `<span class="old">${product.oldPrice}</span>` : '';
+    const discount = product.discount ? `<span class="discount">${product.discount}</span>` : '';
+
     // إنشاء محتوى الكارد
     card.innerHTML = `
         <img src="${product.image}" alt="${product.name}">
@@ -158,8 +157,8 @@ product.forEach(product => {
         </div>
         <div class="price">
             <span class="new">${product.newPrice}</span>
-            <span class="old">${product.oldPrice}</span>
-            <span class="discount">${product.discount}</span>
+            ${oldPrice}
+            ${discount}
         </div>
     `;
 

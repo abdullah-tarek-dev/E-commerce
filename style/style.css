@@ -1,37 +1,42 @@
-/* Global Styles */
-@font-face {
-  font-family: 'Integral CF';
-  src: url('/fonts/Integral-CF-Font-Family/IntegralCF-Regular.otf') format('opentype'),
-       url('/fonts/Integral-CF-Font-Family/IntegralCF-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+/* Start Variables */
+:root {
+  --main-transition: all 0.2s ease-in-out;
+  --secondary-section: rgba(240, 240, 240, 1);
+  --accent-color: #e5e5e5;
+  --text-color: #333333;
 }
-@font-face {
-  font-family: 'Satoshi-Regular';
-  src: url('../fonts/satoshi_complete/Fonts/WEB/fonts/Satoshi-Regular.woff2') format('woff2'),
-       url('../fonts/satoshi_complete/Fonts/WEB/fonts/Satoshi-Regular.woff') format('woff'),
-       url('../fonts/satoshi_complete/Fonts/WEB/fonts/Satoshi-Regular.ttf') format('truetype');
-  font-weight: 400;
-  font-display: swap;
-  font-style: normal;
+
+/* Start Global Rules */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-    /* font-family: 'Integral CF', sans-serif; */
-    margin: 0;
-    padding: 0;
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f8f8f8;
 }
 
 /* start styling Section Two  */
 .two {
     padding: 50px 20px;
     text-align: center;
+    /* background-color: var(--accent-color); */
 }
 
  .head {
-    font-weight: 700;
+    font-weight: 800;
     font-size: 48px;
-    font-family: 'Integral CF';
+    font-family: "Inter", sans-serif;
+    color:#000000;
+    word-spacing: -7px;
 }
 
  .collect {
@@ -53,14 +58,16 @@ body {
 }
  .card img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: 18px;
 }
 
  .card h3 {
-    font-weight: 700;
+    font-weight: 700px;
     font-size: 20px;
     line-height: 100%;
     text-align: start;
+    color:#000000;
+    padding-top:5px;
 }
 
  .card .stars {
@@ -119,10 +126,10 @@ body {
     border-radius: 68px;
     background: transparent;
     cursor: pointer;
-    color:#575757;
+    color:#000000;
 }
  .first:hover{
-    color:aliceblue;
+    color:#ffff;
     background-color: #000;
 }
 /* end styling section two */
@@ -143,93 +150,125 @@ body {
 /* end styling section three */
 
 /* start styling  section four */
-.four{
-    background: #F0F0F0;
-    text-align:center;
-    width:80%;
-    height:100%;
-    margin:auto;
-    border-radius:40px;
-    padding:50px 20px;
-    }
-    .four h1{
-    font-family: 'Integral CF';
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    padding-bottom:10px;
-    }
-    .four .imagecontainer{
-      width: 100%;
-      height:100%;
-      display:flex;
-      flex-wrap:wrap;
-      justify-content: center;
-      gap:20px;
-    }
-    .four .imagecontainer .imageshow{
-    position: relative;
-     background: #FFFFFF;
-    height: 289px;
-    border-radius: 20px;
-    
-    }
-    #smallwidth{
-      width:407px;
-    }
-    #largewidth{
-      width:684px;
-      overflow: hidden;
-    }
-    .four .imagecontainer .imageshow img{
-      width: 100%;
-      border-radius: 20px;
-    }
-    .four .imagecontainer .imageshow h1{
-      position: absolute;
-      top:5% ;
-      left: 20%;
-      transform: translate(-50%, -50%);
-      color: #000;
-      font-family: 'Satoshi';
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 100%;
-    letter-spacing: 0%;
-    vertical-align: middle;
-    }
-    /*  Responsive Design */
+.dress-style-section {
+  padding: 80px 0;
+}
+
+.dress-style-section .container {
+  border-radius: 30px;
+  background-color: #f0f0f0;
+  padding: 30px;
+}
+
+.dress-style-section h2 {
+  margin: 50px auto;
+  font-size: 48px;
+  font-weight: 800;
+  text-align: center;
+}
+
+.dress-style-grid {
+  display: grid;
+  gap: 10px;
+}
+
+.dress-style-card.casual {
+  grid-row: span 2;
+}
+
+.dress-style-card.formal {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.dress-style-card.party {
+  grid-column: span 3;
+  grid-row: span 2;
+  grid-row-start: 3;
+}
+
+.dress-style-card.gym {
+  grid-row: span 2;
+  grid-column-start: 4;
+  grid-row-start: 3;
+}
+
+.dress-style-card {
+  position: relative;
+  height: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 20px;
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.dress-style-card:hover {
+  transform: scale(1.02);
+}
+
+.dress-style-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+  color: #000000;
+}
+
+.casual {
+  background-image: url("../images/casual.png");
+}
+
+.formal {
+  background-image: url("../images/formal.png");
+}
+
+.party {
+  background-image: url("../images/party.png");
+}
+
+.gym {
+  background-image: url("../images/gym.png");
+}
+
+/* Responsive Styles */
 @media (max-width: 992px) {
-    .four {
-        width: 95%;
-        padding: 40px 15px;
-    }
-    .four h1 {
-        font-size: 40px;
-    }
-    .four .imagecontainer {
-        gap: 15px;
-    }
-    #smallwidth, #largewidth {
-        width: 100%;
-    }
+  .dress-style-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
   }
-  
-  @media (max-width: 600px) {
-    .four {
-        width: 100%;
-        padding: 30px 10px;
-    }
-    .four h1 {
-        font-size: 32px;
-    }
-    .four .imagecontainer .imageshow h1 {
-        font-size: 24px;
-        padding: 3px 8px;
-    }
+  .dress-style-section .container h2 {
+    font-size: 32px;
   }
+
+  .dress-style-card.casual,
+  .dress-style-card.formal,
+  .dress-style-card.party,
+  .dress-style-card.gym {
+    grid-column: span 1;
+    grid-row: span 1;
+    grid-row-start: auto;
+    grid-column-start: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .dress-style-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dress-style-card {
+    height: 150px;
+  }
+}
+
+.dress-style-card {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
     /* End styling section four */
 
     /* Start styling section five */
@@ -247,10 +286,13 @@ body {
   }
   
   .five .thefirst h1 {
-    font-family: 'Integral CF';
-    font-weight: 700;
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
     font-size: 48px;
     line-height: 100%;
+    color:#000000;
+    margin-bottom:20px;
+    padding-bottom:20px;
   }
   
   .five .thefirst .directions {
@@ -297,6 +339,7 @@ body {
     flex: 0 0 auto;
     scroll-snap-align: center;
     cursor:grab;
+    color:#000000;
   }
   
   .frame .yellowstar {
@@ -325,6 +368,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
+    color:#555555;
   }
   
   .sectionblack {
@@ -341,14 +385,12 @@ body {
   }
   
   .sectionblack p {
-    font-family: 'Integral CF';
+    font-family: "Inter", sans-serif;
     font-weight: 700;
-    font-size: 40px;
+    font-size: 46px;
     line-height: 45px;
     color: #fff;
     flex: 1;
-    min-width: 280px;
-    text-align: center;
   }
   
   .sectionblack .emailandsubscribe {
@@ -460,3 +502,4 @@ body {
   }
 
   /* End styling section five */
+
