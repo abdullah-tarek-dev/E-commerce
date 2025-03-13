@@ -80,32 +80,42 @@ document.addEventListener("DOMContentLoaded", () => {
   // =====================================================================================================
   const products = [
     {
-      image: "./images/Frame 32.jpg",
+      image: "../images/imagewithoutborder.png",
       name: "T-shirt with Tape Details",
+      halfname: "T-shirt",
       rating: 4.5,
       newPrice: "$120",
+      imageback: "../images/image 5.png",
+      imagefull: "../images/image 6.png",
+      pragraph:" this T-shirt  is perfect for any occasion. Crafted from a soft and breathable fabric,it offers superior comfort and style.",
     },
     {
-      image: "./images/Frame 33.jpg",
+      image: "../images/Frame 33.jpg",
       name: "Skinny Fit Jeans",
+      halfname: "Skinny",
       rating: 4.0,
       newPrice: "$240",
       oldPrice: "$260",
       discount: "-20%",
+      pragraph:" this T-shirt  is perfect for any occasion. Crafted from a soft and breathable fabric,it offers superior comfort and style. ",
     },
     {
-      image: "./images/Frame 34 (1).jpg",
+      image: "../images/Frame 34 (1).jpg",
       name: "Chekered Shirt",
+      halfname: "Chekered",
       rating: 5.0,
       newPrice: "$180",
+      pragraph:" this T-shirt  is perfect for any occasion. Crafted from a soft and breathable fabric,it offers superior comfort and style. ",
     },
     {
-      image: "./images/Frame 38.jpg",
+      image: "../images/Frame 38.jpg",
       name: "Sleeve Striped T-shirt",
+      halfname: "Sleeve",
       rating: 4.0,
       newPrice: "$130",
       oldPrice: "$160",
       discount: "-30%",
+      pragraph:" this T-shirt  is perfect for any occasion. Crafted from a soft and breathable fabric,it offers superior comfort and style. ",
     },
   ];
 
@@ -147,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
       : "";
 
     card.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
+                <img class="imageupdate" src="${product.image}" alt="${product.name}">
                 <h3>${product.name}</h3>
                 <div class="stars">
                     <span class="repeat">${starsHTML}</span>
@@ -159,6 +169,11 @@ document.addEventListener("DOMContentLoaded", () => {
                     ${discount}
                 </div>
             `;
+  // عند الضغط على المنتج، حفظ بياناته والانتقال لصفحة `product.html`
+  card.addEventListener("click", () => {
+    localStorage.setItem("selectedProduct", JSON.stringify(product));
+    window.location.href = "../html/second.html";
+  });
 
     collectContainer.appendChild(card);
   });
@@ -166,30 +181,38 @@ document.addEventListener("DOMContentLoaded", () => {
   // section three
   const product = [
     {
-      image: "./images/image 7.jpg",
+      image: "../images/image 7.jpg",
       name: "Vertical Striped Shirt",
+      halfname: "Vertical",
       rating: 4.5,
       newPrice: "$212",
       oldPrice: "$232",
       discount: "-20%",
+      pragraph:" this T-shirt  is perfect for any occasion. Crafted from a soft and breathable fabric,it offers superior comfort and style. ",
     },
     {
-      image: "./images/image 8.jpg",
+      image: "../images/image 8.jpg",
       name: "Courage Graphic T-shirt",
+      halfname: "Courage ",
       rating: 4.0,
       newPrice: "$145",
+      pragraph:" this T-shirt  is perfect for any occasion. Crafted from a soft and breathable fabric,it offers superior comfort and style. ",
     },
     {
-      image: "./images/image 9.jpg",
+      image: "../images/image 9.jpg",
       name: "Loose Fit Bermuda Shorts",
+      halfname: "Loose",
       rating: 5.0,
       newPrice: "$80",
+      pragraph:" this T-shirt  is perfect for any occasion. Crafted from a soft and breathable fabric,it offers superior comfort and style. ",
     },
     {
-      image: "./images/image 10.jpg",
+      image: "../images/image 10.jpg",
       name: "Faded Skinny Jeans",
+      halfname: "Faded",
       rating: 4.0,
       newPrice: "$210",
+      pragraph:" this T-shirt  is perfect for any occasion. Crafted from a soft and breathable fabric,it offers superior comfort and style. ",
     },
   ];
 
@@ -248,6 +271,8 @@ document.addEventListener("DOMContentLoaded", () => {
     collecttContainer.appendChild(card);
   });
 
+
+  
   const rates = [
     {
       title: "Sarah.",

@@ -678,8 +678,12 @@ ol {
   box-shadow: 0 6px 15px -2px rgb(226, 225, 225); /* ظل قوي من الأسفل فقط */
 }
 .card img {
-  width: 100%;
-  border-radius: 18px;
+  /* width: 100%;
+  border-radius: 18px; */
+  width: 295px;
+height: 298px;
+border-radius: 20px;
+object-fit: cover;
 }
 
 .card h3 {
