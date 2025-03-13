@@ -157,7 +157,7 @@ ol {
 }
 
 .site-header .container {
-  width: 90%;
+  /* width: 90%; */
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -254,7 +254,7 @@ ol {
   border-radius: 20px;
   padding: 20px;
   height: 25px;
-  width: 35%;
+  width: 25%;
   align-items: center;
   display: flex;
   gap: 10px;
@@ -294,6 +294,99 @@ ol {
 
 .user-actions a:hover {
   color: #636363;
+}
+/* Responsive Styles */
+@media (max-width: 992px) {
+
+  .top-bar p {
+    font-size: 12px;
+  }
+  .top-bar .close-btn {
+    position: static;
+    transform: none;
+  }
+  .top-bar .container {
+    flex-direction: column-reverse;
+  }
+  .search-larg {
+    display: none;
+  }
+  .search-bar {
+    display: none;
+  }
+
+  .main-nav ul {
+    gap: 15px;
+  }
+  .menu-icon {
+    display: block;
+  }
+  .main-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
+
+  .main-nav.active {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .main-nav ul li {
+    padding: 10px 20px;
+    border-bottom: 1px solid var(--accent-color);
+  }
+
+  .search-bar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .search-bar.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    background-color: #f0f0f0;
+    padding: 20px;
+    height: 25px;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+  }
+  .search-bar input {
+    background-color: #f0f0f0;
+    border-radius: 62px;
+    width: 100%;
+    height: 25px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+  }
+  .search-icon {
+    display: block;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+}
+@media (max-width: 576px) {
+  .main-nav {
+    display: none;
+  }
 }
 /* Start Styling Section Graphic */
 .graphic {
@@ -586,6 +679,7 @@ ol {
   justify-content: space-evenly;
   position: relative;
   padding: 20px 0;
+  flex-wrap: wrap;
 }
 
 .graphic .remindercontainer .btns::after {
@@ -642,12 +736,14 @@ ol {
   gap: 20px;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .graphic .reminder .reminderfirst .reminderright {
   display: flex;
   align-items: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .graphic .reminder .reminderfirst .reminderright h3 {
@@ -736,7 +832,7 @@ ol {
   padding: 10px 0 0;
   width: 90%;
   flex-wrap: wrap;
-  margin: 30px auto 0;
+  margin: 30px  0;
 }
 
 .frame {
@@ -881,7 +977,7 @@ ol {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-top: 10px;
+  /* margin-top: 9px; */
 }
 
 .card .price .new {
@@ -971,126 +1067,7 @@ ol {
   color: #fff;
 }
 
-@media (max-width: 992px) {
-  .frame {
-    max-width: 320px;
-    padding: 20px 24px;
-  }
 
-  .sectionblack {
-    flex-direction: column;
-    text-align: center;
-    padding: 40px 32px;
-  }
-
-  .sectionblack p {
-    font-size: 32px;
-    line-height: 42px;
-  }
-
-  .sectionblack .emailandsubscribe {
-    width: 100%;
-    max-width: 400px;
-  }
-
-  .sectionblack .emailandsubscribe {
-    max-width: 100%;
-    padding: 0 16px;
-  }
-
-  .sectionblack .emailandsubscribe input,
-  .sectionblack .emailandsubscribe button {
-    font-size: 14px;
-  }
-}
-
-@media (max-width: 600px) {
-  .frame {
-    max-width: 100%;
-    padding: 16px 20px;
-  }
-
-  .sectionblack {
-    padding: 30px 20px;
-  }
-
-  .sectionblack p {
-    font-size: 28px;
-    line-height: 36px;
-  }
-
-  .sectionblack .emailandsubscribe {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .sectionblack .emailandsubscribe {
-    gap: 10px;
-  }
-
-  .sectionblack .emailandsubscribe input,
-  .sectionblack .emailandsubscribe button {
-    padding: 10px 12px;
-  }
-}
-
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-  .graphic .content {
-    width: 80%;
-  }
-
-  .graphic .content .shirt {
-    justify-content: center;
-    width: 100%;
-  }
-
-  .graphic .content .shirt .threeimg {
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-  }
-
-  #view {
-    width: 100%;
-    height: 100%;
-  }
-
-  .graphic .content .information h1 {
-    font-size: 30px;
-  }
-
-  .graphic .content .information .price {
-    font-size: 24px;
-  }
-
-  .graphic .content .information .price .oldprice {
-    font-size: 22px;
-  }
-
-  .graphic .content .information .price .discount {
-    font-size: 14px;
-  }
-
-  .graphic .content .information .pragraph {
-    width: 80%;
-    word-break: break-all;
-  }
-
-  .graphic .content .information .chosesize .size button {
-    padding: 10px 20px;
-  }
-
-  .graphic .content .information .quantity {
-    justify-content: center;
-  }
-
-  .graphic .content .information .quantity .addcart {
-    width: 100%;
-  }
-}
 /* Footer Section */
 .footer-section {
   background-color: var(--secondary-section);
@@ -1214,8 +1191,74 @@ ol {
   color: #ffffff;
 }
 
-/* Responsive */
-@media (max-width: 768px) {
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+  .graphic .content {
+    width: 80%;
+  }
+
+  .graphic .content .shirt {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .graphic .content .shirt .threeimg {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    order:2;
+  }
+
+  #view {
+    /* width: 100%;
+    height: 100%; */
+
+  }
+
+  .graphic .content .information h1 {
+    font-size: 30px;
+  }
+
+  .graphic .content .information .price {
+    font-size: 24px;
+  }
+
+  .graphic .content .information .price .oldprice {
+    font-size: 22px;
+  }
+
+  .graphic .content .information .price .discount {
+    font-size: 14px;
+  }
+
+  .graphic .content .information .pragraph {
+    width: 80%;
+    word-break: break-all;
+  }
+
+  .graphic .content .information .chosesize .size button {
+    padding: 10px 20px;
+  }
+
+  .graphic .content .information .quantity {
+    justify-content: center;
+  }
+
+  .graphic .content .information .quantity .addcart {
+    width: 100%;
+  }
+  .graphic .checkcollect {
+    width:100%;
+  }
+  .frame{
+    width: 100%;
+  }
+  .alsolike h1 {
+    font-size: 30px;
+
+  }
   .footer-top {
     flex-direction: column;
     gap: 30px;
@@ -1238,5 +1281,181 @@ ol {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .frame {
+    max-width: 320px;
+    padding: 20px 24px;
+  }
+
+  .sectionblack {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 32px;
+  }
+
+  .sectionblack p {
+    font-size: 32px;
+    line-height: 42px;
+  }
+
+  .sectionblack .emailandsubscribe {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .sectionblack .emailandsubscribe {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+
+  .sectionblack .emailandsubscribe input,
+  .sectionblack .emailandsubscribe button {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .graphic .content .shirt .threeimg {
+    width: 100%;
+    flex-direction: row;
+
+  }
+  #view {
+    width: 100%;
+  }
+  .graphic .switch {
+    font-size: 14px;
+  }
+  .graphic .content .information .quantity .addcart{
+    font-size: 14px;
+  }
+  .graphic .remindercontainer .btns button{
+    font-size: 16px;
+  }
+  .graphic .remindercontainer h1{
+    font-size: 20px;
+  }
+  .graphic .reminder .reminderfirst .reminderright h3{
+    padding: 10px 12px 5px;
+  }
+  .graphic .reminder .reminderfirst .reminderright select {
+    padding: 12px 20px;
+  }
+  .graphic .reminder .reminderfirst .reminderright span{
+    padding: 12px 20px;
+  }
+  .frame {
+    max-width: 100%;
+    /* padding: 16px 20px; */
+  }
+  .frame h2{
+    font-size: 18px;
+  }
+  .frame h2 span{
+    font-size: 16px;
+  }
+  .frame p{
+    font-size: 14px;
+  }
+  .loadmore{
+    font-size: 14px;
+  }
+  .card h3{
+    font-size: 18px;
+  }
+  .card .stars .repeat{
+    font-size: 16px;
+  }
+  .card .stars .rate{
+    font-size: 14px;
+  }
+  .card .price .new{
+    font-size: 20px;
+  }
+  .card .price .old{
+    font-size: 18px;
+  }
+  .card .discount{
+    font-size: 12px;
+  }
+  .sectionblack {
+    padding: 30px 20px;
+  }
+
+  .sectionblack p {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .sectionblack .emailandsubscribe {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .graphic .content .shirt .threeimg {
+    flex-direction: row;
+  }
+  .graphic .content .information h1{
+    font-size: 24px;
+  }
+  
+.graphic .content .information .stars i {
+  font-size: 15px;
+}
+  .graphic .content .information .stars .rating{
+    font-size: 12px;
+  }
+  .graphic .content .information .price{
+    font-size: 20px;
+  }
+  .sectionblack .emailandsubscribe {
+    gap: 10px;
+  }
+  .graphic .remindercontainer .btns button{
+    font-size: 14px;
+  }
+
+  .sectionblack .emailandsubscribe input,
+  .sectionblack .emailandsubscribe button {
+    padding: 10px 12px;
+  }
+  #view{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 417px){
+  .graphic .reminder .reminderfirst .reminderright select{
+    text-align: center;
+  }
+  .graphic .reminder .reminderfirst .reminderright::after {
+    right: 190px;
+    top: 22%;
+    font-size: 14px;
+  }
+}
+@media (max-width: 400px){
+  .graphic .reminder .reminderfirst .reminderright select{
+    padding: 12px 27px;
+  }
+  .graphic .reminder .reminderfirst .reminderright::after {
+    right: 165px;
+    top: 22%;
+    font-size: 14px;
+  }
+}
+@media (max-width: 399px){
+  .graphic .reminder .reminderfirst .reminderright select{
+    padding: 12px 27px;
+  }
+  .graphic .reminder .reminderfirst .reminderright::after {
+    right: 170px;
+    top: 22%;
+    font-size: 12px;
   }
 }
