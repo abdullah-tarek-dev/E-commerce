@@ -19,14 +19,13 @@
         <div class="container">
           <p>
             Sign up and get 20% off to your first order.
-            <a href="#" class="signup-link">Sign Up Now</a>
+            <a href="index.html" class="signup-link">Sign Up Now</a>
           </p>
           <button class="close-btn" id="closeTopBar" >
             &times;
           </button>
         </div>
       </div>
-  
       <!-- Header Section -->
       <header class="site-header">
         <div class="container">
@@ -35,7 +34,7 @@
             <i class="fa-solid fa-bars"></i>
           </div>
           <!-- Logo -->
-          <a href="#" class="logo">SHOP.CO</a>
+          <a href="index.html" class="logo">SHOP.CO</a>
           <!-- Search Icon -->
           <div class="search-icon" id="searchIcon">
             <i class="fa-solid fa-search"></i>
@@ -51,10 +50,11 @@
               <li class="dropdown">
                 <a href="#">Shop <i class="fa-solid fa-chevron-down"></i></a>
                 <div class="dropdown-content">
-                  <a href="#">Men's Clothing</a>
-                  <a href="#">Women's Clothing</a>
-                  <a href="#">Accessories</a>
-                </div>
+                  <a href="/html/Products.html?style=casual">Casual</a>
+                  <a href="/html/Products.html?style=formal">Formal</a>
+                  <a href="/html/Products.html?style=party">Party</a>
+                  <a href="/html/Products.html?style=gym">Gym</a>
+                  </div>
               </li>
               <li><a href="#">On Sale</a></li>
               <li><a href="#">New Arrivals</a></li>
@@ -70,6 +70,7 @@
           <div class="user-actions">
             <a href="#" class="cart-icon">
               <i class="fa-solid fa-cart-shopping"></i>
+              <span>0</span>
             </a>
             <a href="#" class="account-icon">
               <i class="fa-regular fa-user"></i>
@@ -150,38 +151,33 @@
     <!-- End section three -->
      <!-- Start section four -->
      <section class="dress-style-section">
-        <div class="container">
-          <h2>BROWSE BY DRESS STYLE</h2>
-          <div class="dress-style-grid">
-            <!-- Casual -->
-            <a href="#" class="dress-style-card casual">
-              <div>
-                <h3>Casual</h3>
-              </div>
-            </a>
-            <!-- Formal -->
-            <a href="#" class="dress-style-card formal">
-              <div>
-                <h3>Formal</h3>
-              </div>
-            </a>
-            <!-- Party -->
-            <a href="#" class="dress-style-card party">
-              <div>
-                <h3>Party</h3>
-              </div>
-            </a>
-            <!-- Gym -->
-            <a href="#" class="dress-style-card gym">
-              <div>
-                <h3>Gym</h3>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
+  <div class="container">
+    <h2>BROWSE BY DRESS STYLE</h2>
+    <div class="dress-style-grid">
+<a href="/html/Products.html?style=casual" class="dress-style-card casual">
+  <div>
+    <h3>Casual</h3>
+  </div>
+</a>
+<a href="/html/Products.html?style=formal" class="dress-style-card formal">
+  <div>
+    <h3>Formal</h3>
+  </div>
+</a>
+<a href="/html/Products.html?style=party" class="dress-style-card party">
+  <div>
+    <h3>Party</h3>
+  </div>
+</a>
+<a href="/html/Products.html?style=gym" class="dress-style-card gym">
+  <div>
+    <h3>Gym</h3>
+  </div>
+</a>
+    </div>
+  </div>
+</section>
             <!-- end section four -->
-
              <!-- start section five -->
              <section class="five">
                 <div class="thefirst">
@@ -206,7 +202,6 @@
                     </div>
             </section>
              <!-- end section five -->
-              
     <footer class="footer-section">
         <div class="container">
           <!-- Top Section -->
@@ -282,5 +277,6 @@
         </div>
       </footer>
     <script src="./js/script.js"></script>
+    <script src="./js/Products.js"></script>
 </body>
 </html>

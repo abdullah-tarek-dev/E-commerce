@@ -76,7 +76,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }, stepTime);
   }
-
   // =====================================================================================================
   const products = [
     {
